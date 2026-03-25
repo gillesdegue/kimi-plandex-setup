@@ -20,6 +20,10 @@ RUN mkdir -p /root/models
 # Exposer le port Ollama
 EXPOSE 11434
 
+# Optimisations GPU (Flash Attention + KV q4_0)
+ENV OLLAMA_FLASH_ATTENTION=1
+ENV OLLAMA_KV_CACHE_TYPE=q4_0
+
 # Script de démarrage
 COPY Kimi.Modelfile /root/models/Kimi.Modelfile
 COPY setup.sh /setup.sh

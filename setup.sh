@@ -24,7 +24,9 @@ if [ ! -f "$MODEL_PATH" ]; then
     wget -c -O "$MODEL_PATH" https://huggingface.co/unsloth/Kimi-Dev-72B-GGUF/resolve/main/Kimi-Dev-72B-IQ4_XS.gguf
 fi
 
-# 5. Lancer Ollama en arrière-plan et créer le modèle
+# 5. Lancer Ollama avec optimisations et créer le modèle
+export OLLAMA_FLASH_ATTENTION=1
+export OLLAMA_KV_CACHE_TYPE=q4_0
 ollama serve &
 sleep 10
 ollama create Kimi -f /root/models/Kimi.Modelfile
