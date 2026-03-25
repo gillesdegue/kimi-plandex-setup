@@ -24,5 +24,19 @@ docker build -t kimi-plandex .
 docker run --gpus all -it kimi-plandex
 ```
 
-## 🛠️ Modèle GGUF utilisé
-[unsloth/Kimi-Dev-72B-GGUF/Kimi-Dev-72B-IQ4_XS.gguf](https://huggingface.co/unsloth/Kimi-Dev-72B-GGUF/resolve/main/Kimi-Dev-72B-IQ4_XS.gguf)
+## 🛠️ Utilisation avec Plandex
+
+Pour utiliser **Plandex** avec votre modèle **Kimi** local :
+
+1. **Utiliser l'alias raccourci :**
+```bash
+pdx-kimi
+```
+
+2. **Ou configurer manuellement :**
+```bash
+export PLANDEX_OPENAI_BASE_URL="http://localhost:11434/v1"
+export OPENAI_API_KEY="ollama"
+export PLANDEX_MODEL="Kimi"
+pdx
+```
