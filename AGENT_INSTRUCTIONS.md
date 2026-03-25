@@ -13,7 +13,7 @@ Ce document est destiné à l'agent IA qui reprendra ce projet. Il résume la co
 
 ## 🌐 Méthode de Connexion "Zéro-Config" (Tunnel SSH)
 
-N'essaie PAS d'utiliser des tunnels HTTP publics (Cloudflare, Ngrok) si le réseau est restrictif. La méthode la plus fiable pour que l'utilisateur connecte son **Cursor local** au **Kimi distant** est le **Port Forwarding SSH**.
+N'essaie PAS d'utiliser des tunnels HTTP publics (Cloudflare, Ngrok). La méthode la plus fiable pour que l'utilisateur connecte son **Cursor local** au **Kimi distant** est le **Port Forwarding SSH**.
 
 **Commande à donner à l'utilisateur :**
 ```bash
